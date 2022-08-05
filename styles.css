@@ -1,18 +1,44 @@
 #grid{
-    background-color: bisque;
-    width: 500px;
-    height: 500px;
+    /* background-color: bisque; */
+    width: 512px;
+    height: 512px;
     margin: 0 auto;
-    border-style: solid;
+    /* border-style: solid; */
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-flow: column;
 
 }
 
-.square{
-    /* background-color: aqua; */
-    border-style: solid;
-    width: 10px;
-    height: 10px;
+.flexContainerHorizontal{
+
+}
+
+.flexContainerVertical{
     
+}
+
+.row{
+    background-color: aqua;
+    /* border-style: solid; */
+    width: auto;
+    height: 10px;
+
+    display: flex;
+
+    
+}
+
+.square{
+    background-color: blueviolet;
+    width: 10px;
+    height: auto;
+    /* border-style: solid; */
+    border: 1px solid black;
+    flex: 1;
+
+
 }
 
 .hovered{
