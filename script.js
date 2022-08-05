@@ -11,8 +11,11 @@ for (let i = 0; i < gridSize * gridSize; i++){
 squaresArray.forEach((square)  => {
 
     square.classList.add("square");
+    square.addEventListener('mouseover', function(e) {
+        e.target.style.background = "black";
+    });
     grid.appendChild(square);
+    
 
 });
 
-console.log(squaresArray);
