@@ -6,3 +6,10 @@
     border-style: solid;
 
 }
+
+.square{
+    background-color: aqua;
+    border-style: solid;
+    width: 10px;
+    height: 10px;
+}
