@@ -1,14 +1,29 @@
+body{
+ font-family: 'Courier New', Courier, monospace;
+ background-color: antiquewhite;
+}
+
 #grid{
     /* background-color: bisque; */
     width: 512px;
     height: 512px;
     margin: 0 auto;
-    /* border-style: solid; */
+    border: 1px solid grey;
 
     display: flex;
     flex-wrap: wrap;
     flex-flow: column;
 
+   
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+
+
+}
+
+.container{
+    display: flex;
+    justify-content: center;
 }
 
 .flexContainerHorizontal{
@@ -33,11 +48,11 @@
 }
 
 .square{
-    background-color: blueviolet;
+    background-color: rgb(255, 255, 255);
     width: 10px;
     height: auto;
     /* border-style: solid; */
-    border: 1px solid black;
+    /* border: 1px solid black; */
     flex: 1;
 
 
@@ -45,4 +60,18 @@
 
 .hovered{
     background-color: brown;
+}
+
+h1{
+    margin: 30 auto;
+    text-align: center;
+}
+
+button{
+    margin: 0 30px;
+    /* display: flex; */
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 30px;
+
 }

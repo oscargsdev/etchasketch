@@ -2,8 +2,20 @@ const grid = document.querySelector("#grid");
 
 const gridSizeButton = document.querySelector("#gridSizeButton");
 
+const clearGridButton = document.querySelector("#clearGridButton");
 
-gridSizeButton.addEventListener("click", () =>{
+
+gridSizeButton.addEventListener("click", initGrid);
+
+clearGridButton.addEventListener("click", () =>{
+    clearGrid();
+    createGrid(gridS);
+});
+
+let gridS = 0;
+
+
+function initGrid(){
     let gridSize = prompt("Enter size of grid", "50");
 
     if (gridSize > 100){
@@ -13,9 +25,10 @@ gridSizeButton.addEventListener("click", () =>{
 
     clearGrid();
 
-    createGrid(gridSize);
-});
+    gridS = gridSize;
 
+    createGrid(gridSize);
+}
 
 
 function clearGrid(){
@@ -64,6 +77,10 @@ function createGrid(gridSize){
         
     });
 }
+
+
+
+initGrid();
 
 
 
