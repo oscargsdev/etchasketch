@@ -1,12 +1,13 @@
 const grid = document.querySelector("#grid");
 
-
+const gridSizeButton = document.querySelector("#gridSizeButton");
 
 let gridSize = 50;
-// let s = 500 / (gridSize);
+gridSizeButton.addEventListener("click", () =>{
+    gridSize = prompt("Enter size of grid", "50");
+});
 
-// grid.style.height = (s * 16) + "px";
-// grid.style.width = (s * 16) + "px";
+
 
 let squaresArray = [];
 
