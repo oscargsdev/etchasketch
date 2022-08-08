@@ -33,7 +33,7 @@ function createGrid(gridSize){
     
     let rows = grid.childNodes;
     let rowsA = Array.from(rows);
-    rowsA.shift();
+    // rowsA.shift();
     
     console.log(rows);
     console.log(rowsA);
