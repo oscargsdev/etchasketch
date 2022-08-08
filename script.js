@@ -4,6 +4,11 @@ const gridSizeButton = document.querySelector("#gridSizeButton");
 
 const clearGridButton = document.querySelector("#clearGridButton");
 
+const rainbowButton = document.querySelector("#rainbowButton");
+
+let rainbow = false;
+let gridS = 0;
+
 
 gridSizeButton.addEventListener("click", initGrid);
 
@@ -12,7 +17,21 @@ clearGridButton.addEventListener("click", () =>{
     createGrid(gridS);
 });
 
-let gridS = 0;
+rainbowButton.addEventListener("click", () =>{
+    if (!rainbow){
+        rainbowButton.textContent = "Toggle to Black mode";
+    }
+    else{
+        rainbowButton.textContent = "Toggle to Rainbow mode";
+    }
+
+    rainbow = !rainbow;
+
+    clearGrid();
+    createGrid(gridS);
+})
+
+
 
 
 function initGrid(){
@@ -69,7 +88,22 @@ function createGrid(gridSize){
         sqrA.forEach((sqr) => {
             sqr.classList.add("square");
             sqr.addEventListener('mouseover', function(e) {
-                e.target.style.background = "black";
+                if (rainbow){
+                    let r = Math.floor(Math.random() * 257);
+                    let g = Math.floor(Math.random() * 257);
+                    let b = Math.floor(Math.random() * 257);
+
+                    let rgb = "rgb("+r+","+g+","+b+")";
+
+                    
+
+                    e.target.style.background = rgb;
+
+                }
+                else{
+                    e.target.style.background = "black";
+                }
+                
             });
         });
     
